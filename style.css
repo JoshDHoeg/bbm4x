@@ -20,7 +20,14 @@ video {
    opacity: .5;
 }
 
-#main {
+#main_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 80%;
+  min-height: 80%;
+  width: auto;
+  height: auto;
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight:100;
   background-position: center;
@@ -29,9 +36,12 @@ video {
   background-size: contain;
   background-color: #ffffff;
   color: white;
-  padding: 4rem;
-  margin: 6rem;
+  /*padding: 4rem;*/
+  margin: 10%;
   font-size: 1.2rem;
+}
+#main_wrapper #main_content{
+  padding: 4rem;
 }
 h1 {
   font-size: 3rem;
@@ -39,12 +49,14 @@ h1 {
   margin-top: 0;
   letter-spacing: .3rem;
 }
-#main button {
+#main_wrapper button {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
   display: block;
   width: 21rem;
   padding: .8rem;
   border: none;
-  margin: 10rem auto 1rem auto;
   font-size: 1.3rem;
   background: rgba(0,0,0,0.3);
   color: #fff;
@@ -52,7 +64,16 @@ h1 {
   cursor: pointer;
   transition: .3s background;
 }
-#main button:hover {
+#main_wrapper button:nth-child(2){
+    bottom: 10%;
+}
+#main_wrapper button:nth-child(3){
+    bottom: 20%;
+}
+/*#main_wrapper button:nth-child(4){
+    bottom: 30%;
+}*/
+#main_wrapper button:hover {
    background: rgba(0,0,0,0.6);
 }
 .socials{
@@ -74,6 +95,29 @@ a:hover{
 a img{
   width: 4rem;
 }
+
+#video_player{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(255,255,255,0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: ease-in-out 0.8s;
+}
+#video_player iframe{
+  right: 50%;
+  top: 50%;
+  margin-right: -280px;
+  margin-top: -158px;
+  position: absolute;
+}
+
+
+
+
+
+
 @media screen and (max-width: 500px) {
   div{width:70%;}
 }

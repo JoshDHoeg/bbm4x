@@ -1,32 +1,28 @@
 var vid = document.getElementById("bgvid");
-var pauseButton = document.querySelector("#main button");
+var shopButton = document.querySelector("#main_wrapper #shop");
+var videoButton = document.querySelector("#main_wrapper #watch");
+var video_player = document.querySelector("#video_player");
 
-if (window.matchMedia('(prefers-reduced-motion)').matches) {
-    vid.removeAttribute("autoplay");
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
-}
 
-function vidFade() {
-  vid.classList.add("stopfade");
-}
-
-vid.addEventListener('ended', function()
-{
-// only functional if "loop" is removed
-vid.pause();
-// to capture IE10
-vidFade();
+shopButton.addEventListener("click", function() {
+  window.location.href = "https://www.grailed.com/bbm4x";
 });
 
 
-pauseButton.addEventListener("click", function() {
-  vid.classList.toggle("stopfade");
-  if (vid.paused) {
-    vid.play();
-    pauseButton.innerHTML = "Pause";
-  } else {
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
-  }
-})
+videoButton.addEventListener("click", function() {
+  video_player.style.visibility = 'visible';
+  video_player.style.opacity = '1';
+});
+
+video_player.addEventListener("click", function() {
+  video_player.style.visibility = 'hidden';
+  video_player.style.opacity = '0';
+});
+
+
+// site load_screen -- also uncomment the div in the header and the css style for #load_screen
+jQuery(document).ready(function($) {
+  $(window).load(function(){
+    $('#load_screen').fadeOut('slow',function(){$(this).remove();});
+  });
+});

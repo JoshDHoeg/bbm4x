@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
+  <!-- <div class="load_Screen animate-loadScreen" id="load_screen"><div class="load_image"><img class="animate-load"src="<?php echo get_stylesheet_directory_uri(); ?>/images/sacred6.png"></div></div> -->
+
   <video poster="assets/bbm4x.png" id="bgvid" playsinline autoplay muted loop>
     <source src="assets/bbm4x.mov" type="video/mp4">
   </video>
-  <div id="main">
-    <!-- <h1>Polina</h1> -->
-    <!-- <img src="assets/bbm4x.png" class="logo" alt="bbm4x logo"> -->
-    <!-- <p>filmed by Alexander Wagner 2011
-    <p><a href="http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video">original article</a>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
-    <p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur, ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula. Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p> -->
-    <div class="socials">
-      <a href="https://www.instagram.com/bbm4x/"><img src="assets/instagram.png"></a>
-      <a href="https://twitter.com/bbm4x"><img src="assets/twitter.png"></a>
+
+  <div id="main_wrapper">
+    <div id="main_content">
+      <div class="socials">
+        <a href="https://www.instagram.com/bbm4x/"><img src="assets/instagram.png"></a>
+        <a href="https://twitter.com/bbm4x"><img src="assets/twitter.png"></a>
+      </div>
+      <button id="shop">Shop Now</button>
+      <button id="watch">Watch Video</button>
+      <!-- <button id="learn">Learn More</button> -->
     </div>
-    <button>Shop</button>
+  </div>
+
+  <div id="video_player">
+    <iframe width="560" height="316" src="https://www.youtube.com/embed/MZ5VuZx-hyc" frameborder="0" allowfullscreen></iframe>
   </div>
 
 
