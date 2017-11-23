@@ -21,8 +21,8 @@ video_player.addEventListener("click", function() {
 
 
 // site load_screen -- also uncomment the div in the header and the css style for #load_screen
-jQuery(document).ready(function($) {
-  $(window).load(function(){
+$(document).ready(function() {
+  $(window).on('load', function() {
     $('#load_screen').fadeOut('slow',function(){$(this).remove();});
   });
 });

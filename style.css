@@ -1,7 +1,36 @@
+/*
+	Author: Josh Hoeg
+	Author URI: http://joshdhoeg.com
+  GitHub Theme URI: https://github.com/JoshDHoeg/bbm4x
+  Github Branch: master
+  Copyright (c) 2017 Copyright Holder All Rights Reserved.
+
+            ---------------------------------------------------
+
+This CSS file is seperated into clear and definied sections all of the code
+below was written by myself and does not infringe on any copyrighted material.
+It was created for a clothing brand called bbm4x, and if for any reasonit is
+used for other reasons.... Well haha not much I can do about it so go for it.
+Just remember I probably suck at coding ;)
+
+*//*---------------------------------------------------------------------------\
+|                           Default styling                                    |
+\----------------------------------------------------------------------------*/
 body {
   margin: 0;
   background: #ffffff;
 }
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+
+
+ /*----------------------------------------------------------------------------\
+|                      background video styling                                |
+\----------------------------------------------------------------------------*/
 video {
   position: fixed;
   top: 50%;
@@ -14,10 +43,11 @@ video {
   transform: translateX(-50%) translateY(-50%);
   transition: 1s opacity;
 }
-.stopfade {
-   opacity: .5;
-}
 
+
+ /*----------------------------------------------------------------------------\
+|                          main content styling                                |
+\----------------------------------------------------------------------------*/
 #main_wrapper {
   position: fixed;
   top: 0;
@@ -40,13 +70,8 @@ video {
 #main_wrapper #main_content{
   padding: 4rem;
 }
-h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-top: 0;
-  letter-spacing: .3rem;
-}
-#main_wrapper button {
+
+#main_wrapper #main_content button {
   position: absolute;
   bottom: 10%;
   right: 10%;
@@ -62,19 +87,19 @@ h1 {
   cursor: pointer;
   transition: ease-in-out 0.8s;
 }
-#main_wrapper button:nth-child(2){
+#main_wrapper #main_content button:nth-child(2){
     bottom: 10%;
 }
-#main_wrapper button:nth-child(3){
+#main_wrapper #main_content button:nth-child(3){
     bottom: 20%;
 }
-#main_wrapper button:hover {
+#main_wrapper #main_content button:hover {
    background: rgba(0,0,0,0.6);
 }
-.socials{
+#main_wrapper #main_content .socials{
   text-align: right;
 }
-a {
+#main_wrapper #main_content .socials a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
@@ -82,13 +107,18 @@ a {
   padding: .5rem;
   transition: ease-in-out 0.8s;
 }
-a:hover{
+#main_wrapper #main_content .socials a:hover{
   opacity: 0.6;
 }
-a img{
+#main_wrapper #main_content .socials a img{
   width: 4rem;
 }
 
+
+
+ /*----------------------------------------------------------------------------\
+|                          video player styling                                |
+\----------------------------------------------------------------------------*/
 #video_player{
   position: fixed;
   height: 100%;
@@ -107,6 +137,38 @@ a img{
 }
 
 
+
+ /*----------------------------------------------------------------------------\
+|                           load screen styling                                |
+\----------------------------------------------------------------------------*/
+.load_Screen{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: table;
+  background: #ffffff;
+  z-index: 100;
+}
+.load_screen .load_image{
+  display: table-cell;
+  vertical-align: middle;
+}
+.load_Screen .load_image img{
+  height: 512px;
+  position: absolute;
+  display: block;
+  left: 50%;
+  margin-left: -256px;
+  top: 50%;
+  margin-top: -256px;
+
+}
+
+
+
+ /*----------------------------------------------------------------------------\
+|                           Screen Size Cusotmizations                         |
+\----------------------------------------------------------------------------*/
 @media screen and (max-width: 714px) {
   #video_player iframe{
     width: 80%;
@@ -115,9 +177,6 @@ a img{
     margin-right: 0;
   }
 }
-
-
-
 @media screen and (max-width: 502px) {
   #main_wrapper{
     background-image: url('assets/logo.png');
@@ -125,7 +184,7 @@ a img{
   #main_wrapper #main_content{
     padding: 2rem;
   }
-  .socials{
+  #main_wrapper #main_content .socials{
     text-align: center;
   }
 }
