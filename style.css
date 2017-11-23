@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  background: #ffffff;
+}
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('assets/bbm4x.png') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade {
+   opacity: .5;
+}
+
+#main {
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100;
+  background-position: center;
+  background-image: url('assets/logo1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #ffffff;
+  color: white;
+  padding: 4rem;
+  margin: 6rem;
+  font-size: 1.2rem;
+}
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+#main button {
+  display: block;
+  width: 21rem;
+  padding: .8rem;
+  border: none;
+  margin: 10rem auto 1rem auto;
+  font-size: 1.3rem;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  border-radius: 0;
+  cursor: pointer;
+  transition: .3s background;
+}
+#main button:hover {
+   background: rgba(0,0,0,0.6);
+}
+.socials{
+  text-align: right;
+}
+a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.3;
+  /*background:rgba(0,0,0,0.5);*/
+  padding: .5rem;
+  transition: .6s background;
+}
+a:hover{
+  /*background:rgba(0,0,0,0.9);*/
+  opacity: 0.6;
+}
+a img{
+  width: 4rem;
+}
+@media screen and (max-width: 500px) {
+  div{width:70%;}
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url('assets/bbm4x.png') #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
