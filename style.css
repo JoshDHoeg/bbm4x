@@ -63,6 +63,7 @@ video {
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #ffffff;
+  opacity: 0.9;
   color: white;
   margin: 10%;
   font-size: 1.2rem;
@@ -81,7 +82,7 @@ video {
   padding: .8rem;
   border: none;
   font-size: 1.3rem;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.4);
   color: #fff;
   border-radius: 0;
   cursor: pointer;
@@ -94,7 +95,7 @@ video {
     bottom: 20%;
 }
 #main_wrapper #main_content button:hover {
-   background: rgba(0,0,0,0.6);
+   background: rgba(0,0,0,0.8);
 }
 #main_wrapper #main_content .socials{
   text-align: right;
@@ -103,12 +104,12 @@ video {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  opacity: 0.3;
+  opacity: 0.4;
   padding: .5rem;
   transition: ease-in-out 0.8s;
 }
 #main_wrapper #main_content .socials a:hover{
-  opacity: 0.6;
+  opacity: 0.8;
 }
 #main_wrapper #main_content .socials a img{
   width: 4rem;
@@ -184,4 +185,10 @@ video {
   #main_wrapper #main_content .socials{
     text-align: center;
   }
+}
+
+@media screen and (max-width: 400px) {
+  #main_wrapper #main_content button:nth-child(3){
+      bottom: 23%;
+    }
 }
