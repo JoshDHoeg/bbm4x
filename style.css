@@ -12,8 +12,6 @@ video {
   height: auto;
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
-  background: url('assets/bbm4x.png') no-repeat;
-  background-size: cover;
   transition: 1s opacity;
 }
 .stopfade {
@@ -36,7 +34,6 @@ video {
   background-size: contain;
   background-color: #ffffff;
   color: white;
-  /*padding: 4rem;*/
   margin: 10%;
   font-size: 1.2rem;
 }
@@ -55,6 +52,7 @@ h1 {
   right: 10%;
   display: block;
   width: 21rem;
+  max-width: 80%;
   padding: .8rem;
   border: none;
   font-size: 1.3rem;
@@ -62,7 +60,7 @@ h1 {
   color: #fff;
   border-radius: 0;
   cursor: pointer;
-  transition: .3s background;
+  transition: ease-in-out 0.8s;
 }
 #main_wrapper button:nth-child(2){
     bottom: 10%;
@@ -70,9 +68,6 @@ h1 {
 #main_wrapper button:nth-child(3){
     bottom: 20%;
 }
-/*#main_wrapper button:nth-child(4){
-    bottom: 30%;
-}*/
 #main_wrapper button:hover {
    background: rgba(0,0,0,0.6);
 }
@@ -84,12 +79,10 @@ a {
   color: #fff;
   text-decoration: none;
   opacity: 0.3;
-  /*background:rgba(0,0,0,0.5);*/
   padding: .5rem;
-  transition: .6s background;
+  transition: ease-in-out 0.8s;
 }
 a:hover{
-  /*background:rgba(0,0,0,0.9);*/
   opacity: 0.6;
 }
 a img{
@@ -114,14 +107,25 @@ a img{
 }
 
 
-
-
-
-
-@media screen and (max-width: 500px) {
-  div{width:70%;}
+@media screen and (max-width: 714px) {
+  #video_player iframe{
+    width: 80%;
+    height: 40%;
+    right: 10%;
+    margin-right: 0;
+  }
 }
-@media screen and (max-device-width: 800px) {
-  html { background: url('assets/bbm4x.png') #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
+
+
+
+@media screen and (max-width: 502px) {
+  #main_wrapper{
+    background-image: url('assets/logo.png');
+  }
+  #main_wrapper #main_content{
+    padding: 2rem;
+  }
+  .socials{
+    text-align: center;
+  }
 }

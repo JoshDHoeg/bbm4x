@@ -5,7 +5,7 @@ var video_player = document.querySelector("#video_player");
 
 
 shopButton.addEventListener("click", function() {
-  window.location.href = "https://www.grailed.com/bbm4x";
+  window.open("https://www.grailed.com/bbm4x");
 });
 
 
