@@ -99,6 +99,7 @@ video {
 }
 #main_wrapper #main_content .socials{
   text-align: right;
+  padding-top: 100px;
 }
 #main_wrapper #main_content .socials a {
   display: inline-block;
@@ -168,14 +169,15 @@ video {
 |                                banner styling                                |
 \----------------------------------------------------------------------------*/
 .banner{
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
-  background: #ffffff;
-  color: #000000;
-  padding: 20px;
+  background: rgba(0,0,0,0.4);
+  color: #ffffff;
+  padding: 20px 0;
   text-align: center;
   cursor:pointer;
+  z-index: 1000;
 }
 
 
@@ -201,6 +203,7 @@ video {
   }
   #main_wrapper #main_content .socials{
     text-align: center;
+    padding-top: 160px;
   }
 }
 
